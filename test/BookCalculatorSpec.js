@@ -7,15 +7,18 @@ describe('Calculate optional book cost', function(){
     it('Should return 8 when just buy one book', function(){
         var bookList = [1,0,0,0,0];
         var actualCost = calculator.calculate(bookList);
-        assert.equal(actualCost, 8);
+        assert.equal(actualCost, 8.0);
     });
 
     it('Should return 16 when buy two same books', function(){
         var bookList = [2,0,0,0,0];
         var actualCost = calculator.calculate(bookList);
-        assert.equal(actualCost, 16);
+        assert.equal(actualCost, 16.0);
     });
 
-
-
+    it('Should return 16 when buy two same books', function(){
+        var bookList = [1,1,0,0,0];
+        var actualCost = calculator.calculate(bookList);
+        assert.equal(actualCost, 15.2);
+    });
 });
