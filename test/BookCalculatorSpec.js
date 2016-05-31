@@ -80,6 +80,14 @@ describe('Calculate optional book cost', function(){
         });
     });
 
+    //describe('eight books', function(){
+    //    it('Should return 51.2 when buy five different books and the number is 22211', function(){
+    //        var bookList = [2,2,2,1,1];
+    //        var actualCost = calculator.calculate(bookList);
+    //        assert.equal(actualCost, 51.2);
+    //    });
+    //})
+
 
 
 
