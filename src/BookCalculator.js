@@ -15,13 +15,12 @@ BookCalculator.prototype.calculate = function (bookList) {
     while (bookTypes > 1){
         sum += bookTypes * this.discountObj[bookTypes] * 8;
 
-        list = bookList.map(quantity => {
+        list = list.map(quantity => {
             if (quantity >= 1){
                 quantity--;
             }
             return quantity;
         });
-
         bookTypes = this.getBookTypes(list);
     }
     sum += list.reduce((a, b) => a + b) * 8;
@@ -30,13 +29,6 @@ BookCalculator.prototype.calculate = function (bookList) {
 
 BookCalculator.prototype.getBookTypes = function(bookList){
     return bookList.filter(quantity => {return quantity >= 1}).length;
-    //var number = 0;
-    //bookList.forEach(quantity => {
-    //    if (quantity >= 1){
-    //        number++;
-    //    }
-    //});
-    //return number;
 };
 
 
